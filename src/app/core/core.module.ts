@@ -1,20 +1,18 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from "@angular/material/toolbar";
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
-import { MatIconModule } from '@angular/material/icon';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { createIcons } from '../utils/svg.util';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule,
-    MatIconModule
+    SharedModule
   ],
   declarations: [
     HeaderComponent, 
