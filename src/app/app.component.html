@@ -1,16 +1,19 @@
 <mat-sidenav-container>
   <!-- 侧边栏 -->
-  <mat-sidenav #sidenav>
+  <mat-sidenav #sidenav mode="side">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <!-- 主栏 -->
   <div class="site">
+    <!-- 头部 -->
     <header>
-      <app-header></app-header>
+      <app-header (toggle)="sidenav.toggle()"></app-header>
     </header>
+    <!-- 内容 -->
     <main>
-    <button (click)="sidenav.toggle()">开关</button>
+      
     </main>
+    <!-- 底部 -->
     <footer>
       <app-footer></app-footer>
     </footer>
