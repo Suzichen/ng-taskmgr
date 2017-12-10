@@ -1,5 +1,4 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 
@@ -11,7 +10,6 @@ import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule
   ],
   declarations: [
