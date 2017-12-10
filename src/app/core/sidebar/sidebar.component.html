@@ -1,3 +1,20 @@
-<p>
-  sidebar works!
-</p>
+<mat-nav-list [disableRipple]="false">
+
+    <h3 mat-subheader>项目</h3>
+    <mat-list-item *ngFor="let project of projects">
+      <mat-icon [svgIcon]="project.icon"></mat-icon>
+      <h4 mat-line>{{project.title}}</h4>
+      <p mat-line>{{project.desc}}</p>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <h3 mat-subheader>日期</h3>
+
+    <mat-list-item *ngFor="let date of dates">
+      <mat-icon [svgIcon]="date.icon"></mat-icon>
+      <h4 mat-line>{{date.title}}</h4>
+      <p mat-line>{{date.desc}}</p>
+    </mat-list-item>
+
+</mat-nav-list>
