@@ -7,6 +7,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatFormFieldModule,
     MatListModule,
+    MatSlideToggleModule
   ],
   exports: [
     CommonModule,
@@ -28,6 +30,7 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatFormFieldModule,
     MatListModule,
+    MatSlideToggleModule
   ],
   declarations: []
 })

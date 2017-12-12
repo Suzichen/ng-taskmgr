@@ -1,4 +1,7 @@
 <mat-toolbar color="primary">
   <mat-icon (click)="toggleSidebar()" class="menu">menu</mat-icon>
   <span>企业协作平台</span>
+  <div class="fill-space"></div>
+  <mat-slide-toggle (change)="toggleTheme($event.checked)">主题切换</mat-slide-toggle>
 </mat-toolbar>
+ 

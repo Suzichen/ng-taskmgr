@@ -1,4 +1,4 @@
-<mat-sidenav-container>
+<mat-sidenav-container [class.my-app-dark-theme]="darkTheme">
   <!-- 侧边栏 -->
   <mat-sidenav #sidenav>
     <app-sidebar></app-sidebar>
@@ -7,7 +7,10 @@
   <div class="site">
     <!-- 头部 -->
     <header>
-      <app-header (toggle)="sidenav.toggle()"></app-header>
+      <app-header 
+      (toggle)="sidenav.toggle()" 
+      (toggleDarkTheme)="changeTheme($event)">
+    </app-header>
     </header>
     <!-- 内容 -->
     <main>

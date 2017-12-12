@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  public darkTheme: boolean = false;
+  changeTheme(event) {
+    this.darkTheme = event;
+  }
 }
