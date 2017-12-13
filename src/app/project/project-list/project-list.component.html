@@ -1,0 +1,13 @@
+<app-project-item 
+*ngFor="let item of items" 
+[item]="item" 
+class="card">
+
+</app-project-item>
+
+<button 
+mat-fab 
+(click)="openNewProjectDialog()" 
+class="add-project">
+  <mat-icon>add</mat-icon>
+</button>

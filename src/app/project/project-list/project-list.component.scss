@@ -1,0 +1,15 @@
+app-project-item.card {
+  flex: 0 0 320px;
+  margin: 10px;
+}
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button.add-project {
+  position: fixed;
+  right: 30px;
+  bottom: 80px;
+}
