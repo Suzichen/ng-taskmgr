@@ -1,0 +1,54 @@
+<form class="example-form">
+  <mat-card>
+    <!-- 页眉 -->
+    <mat-card-header>
+        <mat-card-title>用户注册</mat-card-title>
+    </mat-card-header>
+    <!-- 内容区 -->
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="请输入邮箱">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="请输入用户名">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="请输入密码">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="请再次输入密码">
+      </mat-form-field>
+      <!-- 头像选择 -->
+      <mat-grid-list cols="8">
+        <mat-grid-tile colspan="8">请选择一个头像</mat-grid-tile>
+        <mat-grid-tile
+            *ngFor="let avatar of avatars">
+            <mat-icon class="avatar" [svgIcon]="avatar"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+    <!-- 操作区 -->
+    <mat-card-actions align="start">
+        <button 
+          mat-raised-button
+          type="button"
+          (click)="onAction1"
+        >
+          重置
+        </button>
+        <button 
+          mat-raised-button 
+          type="button"
+          color="primary" 
+          (click)="onAction1"
+        >
+          注册
+        </button>
+    </mat-card-actions>
+    <!-- 页脚 -->
+    <mat-card-footer>
+      <p>已有帐号？<a routerLink="/login">登录</a></p>
+    </mat-card-footer>
+  </mat-card>
+</form>

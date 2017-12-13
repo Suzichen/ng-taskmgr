@@ -25,6 +25,12 @@ const ICONS = [
   }
 ]
 
+// svg头像
+const AVATARS = {
+  name: 'avatars',
+  url: '../../assets/img/avatar/avatars.svg'
+}
+
 export const createIcons = (
   ir: MatIconRegistry,
   ds: DomSanitizer
@@ -44,5 +50,10 @@ export const createIcons = (
       ds.bypassSecurityTrustResourceUrl(icon.url)
     );
   })
+
+  ir.addSvgIconSetInNamespace(
+    AVATARS.name,
+    ds.bypassSecurityTrustResourceUrl(AVATARS.url)
+  )
   
 }
