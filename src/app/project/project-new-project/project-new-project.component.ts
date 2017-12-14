@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'app-project-new-project',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectNewProjectComponent implements OnInit {
 
-  constructor() { }
+  private project = {
+    name: '',
+    desc: ''
+  }
+
+  constructor(
+    public dialogRef: MatDialogRef<ProjectNewProjectComponent>,
+    @Inject(MAT_DIALOG_DATA) private data: any
+  ) { }
 
   ngOnInit() {
+    console.log(this.data)  // 测试
   }
+
+  onConfirm(): void {
+    this.dialogRef.close(this.project);
+  }
+
 
 }
