@@ -1,0 +1,17 @@
+div.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+div.fill {
+  flex: 1;
+  text-align: center;
+}
+
+// 解决部分svg图标偏移bug
+mat-icon.svg-icon {
+  vertical-align: sub;
+}

@@ -22,6 +22,26 @@ const ICONS = [
   {
     name: 'week',
     url: '../../assets/img/sidebar/week.svg'
+  },
+  {
+    name: 'add',
+    url: '../../assets/img/icons/add.svg'
+  },
+  {
+    name: 'burger-navigation',
+    url: '../../assets/img/icons/burger-navigation.svg'
+  },
+  {
+    name: 'delete',
+    url: '../../assets/img/icons/delete.svg'
+  },
+  {
+    name: 'hand-grab-o',
+    url: '../../assets/img/icons/hand-grab-o.svg'
+  },
+  {
+    name: 'move',
+    url: '../../assets/img/icons/move.svg'
   }
 ]
 
