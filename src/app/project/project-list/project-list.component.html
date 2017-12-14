@@ -1,7 +1,8 @@
 <app-project-item 
 *ngFor="let item of items" 
 [item]="item" 
-class="card">
+class="card" 
+(invite)="openInviteDialog()">
 
 </app-project-item>
 
