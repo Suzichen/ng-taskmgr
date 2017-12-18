@@ -1,0 +1,67 @@
+:host {width: 100%;}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+}
+
+/* 项目优先级样式 */
+.container.priority-normal {
+  border-left: 3px solid #a6a6a6;
+}
+.container.priority-important {
+  border-left: 3px solid #ffaf38;
+}
+.container.priority-emergency {
+  border-left: 3px solid #ff4f3e;
+}
+
+mat-checkbox.completion-status {
+  order: -1;
+  margin: 5px;
+}
+
+.main {
+  order: 1;
+  width: 100%;
+}
+
+.main.completed {
+  color: #888;
+}
+
+.bottom-bar {
+  display: flex;
+  order: 1;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  width: 100%;
+  height: 18px;
+  font-size: 10px;
+}
+
+.due-date {
+  background-color: #ff4f3e;
+  color: #fff;
+}
+
+mat-icon.alarm {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.avatar {
+  order: 3;
+}
+
+.avatar mat-icon {
+  overflow: hidden;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  margin: 0 10px;
+}

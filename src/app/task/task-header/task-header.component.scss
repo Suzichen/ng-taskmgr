@@ -13,5 +13,5 @@ div.fill {
 
 // 解决部分svg图标偏移bug
 mat-icon.svg-icon {
-  vertical-align: sub;
+  line-height: 1;
 }

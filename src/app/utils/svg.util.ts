@@ -42,6 +42,10 @@ const ICONS = [
   {
     name: 'move',
     url: '../../assets/img/icons/move.svg'
+  },
+  {
+    name: 'avatar-default',
+    url: '../../assets/img/avatar/unassigned.svg'
   }
 ]
 

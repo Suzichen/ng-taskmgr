@@ -15,46 +15,56 @@ export class TaskHomeComponent implements OnInit {
         {
           id: 1,
           desc: '任务一：balabala',
+          completed: true,
+          priority: 1,
           owner: {
             id: 1,
             name: '张三',
-            avatar: 'avatar:svg-11'
+            avatar: 'avatars:svg-11'
           },
           dueDate: new Date()
         },
         {
           id: 2,
           desc: '任务二：balabala',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: '李四',
-            avatar: 'avatar:svg-12'
+            avatar: 'avatars:svg-12'
           },
+          reminder: true,
           dueDate: new Date()
         }
       ]
     },
     {
-      id: 2,
+      id: 3,
       name: '进行中',
       tasks: [
         {
           id: 1,
           desc: '任务一：balabala',
+          completed: true,
+          priority: 3,
           owner: {
             id: 1,
             name: '王五',
-            avatar: 'avatar:svg-13'
+            avatar: 'avatars:svg-13'
           },
+          reminder: true,
           dueDate: new Date()
         },
         {
-          id: 2,
-          desc: '任务二：balabala',
+          id: 4,
+          desc: '任务二：特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务特别长的任务',
+          completed: false,
+          priority: 2,
           owner: {
             id: 1,
             name: '赵六',
-            avatar: 'avatar:svg-14'
+            // avatar: 'avatars:svg-14'
           },
           dueDate: new Date()
         }
