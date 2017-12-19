@@ -1,0 +1,18 @@
+mat-form-field.full-width {
+  width: 100%;
+}
+
+div.priority {
+  display: flex;
+}
+
+mat-radio-group {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: space-around;
+}

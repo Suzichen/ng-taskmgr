@@ -1,0 +1,68 @@
+<form>
+  <h1 matDialogTitle>添加任务：</h1>
+  
+  <mat-dialog-content>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="任务内容">
+    </mat-form-field>
+
+    <div class="priority">
+      <label>级别: </label>
+      <mat-radio-group>
+        <mat-radio-button value="normal">普通</mat-radio-button>
+        <mat-radio-button value="important">重要</mat-radio-button>
+        <mat-radio-button value="enmergency">紧急</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div>
+      <p>更改执行者</p>
+      <div></div>
+    </div>
+
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="picker1" placeholder="选择截止日期" disabled>
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput [matDatepicker]="picker2" placeholder="选择提醒日期" disabled>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2 disabled="false"></mat-datepicker>
+    </mat-form-field>
+
+    <div>
+      <p>更改参与者</p>
+      <div></div>
+    </div>
+
+    <mat-form-field class="full-width">
+      <input matInput placeholder="请输入成员email">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="备注" matTextareaAutosize matAutosizeMinRows="2"
+                matAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+
+  </mat-dialog-content>
+  
+  <mat-dialog-actions>
+    <button 
+      mat-raised-button 
+      type="button" 
+      mat-dialog-close>
+      关闭
+    </button>
+  <button 
+    mat-raised-button 
+    color="primary"
+    type="button" 
+    (click)="onConfirm()">
+    保存
+  </button>
+      
+  </mat-dialog-actions>
+</form>
