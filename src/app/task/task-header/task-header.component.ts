@@ -8,7 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TaskHeaderComponent implements OnInit {
 
   @Input() header;
-  @Output() newTask: EventEmitter<any> = new EventEmitter();
+  @Output() newTask: EventEmitter<void> = new EventEmitter();
+  @Output() moveClick: EventEmitter<void> = new EventEmitter();
+  @Output() deleteClick: EventEmitter<void> = new EventEmitter();
+  @Output() editClick: EventEmitter<void> = new EventEmitter();
 
   constructor() { }
 
@@ -17,6 +20,18 @@ export class TaskHeaderComponent implements OnInit {
 
   new() {
     this.newTask.emit();
+  }
+
+  moveToList() {
+    this.moveClick.emit();
+  }
+
+  deleteList() {
+    this.deleteClick.emit();
+  }
+
+  editList() {
+    this.editClick.emit();
   }
 
 }

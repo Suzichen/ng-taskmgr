@@ -8,12 +8,15 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class TaskNewTaskComponent implements OnInit {
 
+  public title: string;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
     public dialogRef: MatDialogRef<TaskNewTaskComponent>
   ) { }
 
   ngOnInit() {
+    this.title = this.data.title;
   }
 
   onConfirm(): void {

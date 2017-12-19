@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { ProjectNewProjectComponent } from "../project-new-project/project-new-project.component";
 import { ProjectInviteComponent } from "../project-invite/project-invite.component";
+import { ConfirmComponent } from "../../shared/confirm/confirm.component";
 
 @Component({
   selector: 'app-project-list',
@@ -36,12 +37,10 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
   }
 
-  public project = {name: 'sss', desc: 'xxx'} // 测试
-
   openNewProjectDialog() {
     let dialogRef = this.dialog.open(
       ProjectNewProjectComponent, {
-        data: this.project
+        data: {title: '新建项目'}
       }
     );
 
@@ -49,7 +48,21 @@ export class ProjectListComponent implements OnInit {
       .subscribe(data => {
         if(!data) return;
         console.log(data)
-      })
+      });
+  }
+
+  openEditDialog() {
+    let dialogRef = this.dialog.open(
+      ProjectNewProjectComponent, {
+        data: {title: '修改项目'}
+      }
+    );
+
+    dialogRef.afterClosed()
+      .subscribe(data => {
+        if(!data) return;
+        console.log(data)
+      });
   }
 
   openInviteDialog() {
@@ -64,5 +77,19 @@ export class ProjectListComponent implements OnInit {
     })
   }
 
+  openDeleteDialog() {
+    let dialogRef = this.dialog.open(
+      ConfirmComponent,
+      {
+        data: {title: '确定删除此项目？', content: '删除后不可恢复'}
+      }
+    )
+
+    dialogRef.afterClosed()
+    .subscribe(data => {
+      if(!data) return;
+      console.log(data)
+    })
+  }
 }
 

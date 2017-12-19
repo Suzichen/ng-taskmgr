@@ -1,8 +1,10 @@
 <app-project-item 
-*ngFor="let item of items" 
-[item]="item" 
-class="card" 
-(invite)="openInviteDialog()">
+  *ngFor="let item of items" 
+  [item]="item" 
+  class="card" 
+  (invite)="openInviteDialog()" 
+  (edit)="openEditDialog()" 
+  (delete)="openDeleteDialog()">
 
 </app-project-item>
 

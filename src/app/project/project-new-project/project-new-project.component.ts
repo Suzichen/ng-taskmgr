@@ -11,7 +11,8 @@ export class ProjectNewProjectComponent implements OnInit {
   private project = {
     name: '',
     desc: ''
-  }
+  };
+  public title: string;
 
   constructor(
     public dialogRef: MatDialogRef<ProjectNewProjectComponent>,
@@ -19,7 +20,7 @@ export class ProjectNewProjectComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.data)  // 测试
+    this.title = this.data.title;
   }
 
   onConfirm(): void {

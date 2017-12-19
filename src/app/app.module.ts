@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatSidenavModule } from "@angular/material";
+import "hammerjs/hammer"
 
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
