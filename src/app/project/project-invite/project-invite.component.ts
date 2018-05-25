@@ -21,7 +21,7 @@ export class ProjectInviteComponent implements OnInit {
       id: 1,
       name: '王五'
     }
-  ]
+  ];
 
   private user: {id: number, name: string};
 
