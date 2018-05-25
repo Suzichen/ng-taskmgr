@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from "@angular/forms";
 
-import { 
+import {
   MatToolbarModule,
   MatIconModule,
   MatCardModule,
@@ -50,5 +50,5 @@ import {
   declarations: []
 })
 export class SharedModule {
-  
+
 }
